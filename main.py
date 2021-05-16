@@ -107,12 +107,19 @@ def plot_common_directors_graph():
 
 
 def get_budget_as_number(unedited_budget):
+    """
+    This method gets the budget of an individual movie as a number.
+    :param unedited_budget: A string of the data parsed from IMDb.
+    :return: an integer representing the budget for the movie.
+    """
     separated = unedited_budget.split(' ')
     if 'AUD' in separated[0] or 'INR' in separated[0]:
         edited_budget = separated[0].replace(',', '')[3:-1]
     else:
         edited_budget = separated[0].replace(',', '')[1:-1]
     return int(edited_budget)
+
+
 def plot_budget_and_adjusted_gross_scatter_plot():
     """
     This method plots the budget of each film in relation to the adjusted gross.
@@ -136,6 +143,6 @@ def plot_budget_and_adjusted_gross_scatter_plot():
 
 
 # Plotting of graphs
-# plot_common_directors_graph()
-# plot_common_cast_graph()
+plot_common_directors_graph()
+plot_common_cast_graph()
 plot_budget_and_adjusted_gross_scatter_plot()
