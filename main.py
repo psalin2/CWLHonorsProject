@@ -143,6 +143,6 @@ def plot_budget_and_adjusted_gross_scatter_plot():
 
 
 # Plotting of graphs
-plot_common_directors_graph()
 plot_common_cast_graph()
+plot_common_directors_graph()
 plot_budget_and_adjusted_gross_scatter_plot()
